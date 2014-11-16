@@ -16,6 +16,11 @@ gem 'turbolinks'
 
 # Locale
 gem 'russian'
+gem 'devise-russian'
+
+# Admin area
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
 
 group :development do
   # Annotate models
