@@ -24,6 +24,6 @@
 #  updated_at       :datetime
 #
 
-class YkmDolg_201307201406 < ActiveRecord::Base
+class YkmDolg201307201406 < ActiveRecord::Base
   self.table_name = :ykm_dolg_201307201406
 end

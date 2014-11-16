@@ -1,8 +1,8 @@
 # == Schema Information
 #
-# Table name: obch_dolg_200909201306 # (17)Obch_DOLG_2009_09_2013_06
+# Table name: obch_dolg_201307201406 # (17)Obch_DOLG_2013_07_2014_06
 #
-#  id               :integer          not null, primary key # (17)Obch_DOLG_2009_09_2013_06
+#  id               :integer          not null, primary key # (17)Obch_DOLG_2013_07_2014_06
 #  account          :integer                                # № л.сч
 #  street           :string(255)                            # Улица
 #  house            :string(255)                            # № Дома
@@ -24,6 +24,6 @@
 #  updated_at       :datetime
 #
 
-class ObchDolg_200909201306 < ActiveRecord::Base
-  self.table_name = :obch_dolg_200909201306
+class ObchDolg201307201406 < ActiveRecord::Base
+  self.table_name = :obch_dolg_201307201406
 end
