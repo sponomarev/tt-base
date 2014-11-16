@@ -4,6 +4,7 @@ gem 'rails', '4.1.7'
 
 # Database
 gem 'pg'
+gem 'migration_comments'
 
 # Assets and etc.
 gem 'sass-rails', '~> 4.0.3'
