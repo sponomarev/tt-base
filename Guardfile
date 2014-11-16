@@ -1,4 +1,4 @@
-guard :annotate, show_indexes: true do
+guard :annotate do
   watch('db/schema.rb')
 end
 
