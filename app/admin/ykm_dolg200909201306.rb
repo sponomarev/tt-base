@@ -1,4 +1,6 @@
 ActiveAdmin.register YkmDolg200909201306 do
+  menu parent: 'Задолженности'
+
   actions :all, except: [:new, :edit, :destroy]
 
   filter :account

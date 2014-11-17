@@ -1,4 +1,6 @@
 ActiveAdmin.register ObchDolg201307201406 do
+  menu parent: 'Задолженности'
+
   actions :all, except: [:new, :edit, :destroy]
 
   filter :account
