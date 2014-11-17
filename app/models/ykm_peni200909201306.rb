@@ -1,8 +1,8 @@
 # == Schema Information
 #
-# Table name: obch_peni200909201306 # (7)Obch_PENI_2009_09_2013_06
+# Table name: ykm_peni200909201306 # (7)YKM_PENI_2009_09_2013_06
 #
-#  id         :integer          not null, primary key # (7)Obch_PENI_2009_09_2013_06
+#  id         :integer          not null, primary key # (7)YKM_PENI_2009_09_2013_06
 #  account    :integer                                # № л.сч
 #  period     :date                                   # Период
 #  service    :string(255)                            # Услуга
@@ -14,6 +14,6 @@
 #  updated_at :datetime
 #
 
-class ObchPeni200909201306 < ActiveRecord::Base
-  self.table_name = :obch_peni200909201306
+class YkmPeni200909201306 < ActiveRecord::Base
+  self.table_name = :ykm_peni200909201306
 end

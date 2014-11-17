@@ -1,8 +1,8 @@
 # == Schema Information
 #
-# Table name: obch_peni200909201306 # (7)Obch_PENI_2009_09_2013_06
+# Table name: obch_peni201307201406 # (7)Obch_PENI_2013_07_2014_06
 #
-#  id         :integer          not null, primary key # (7)Obch_PENI_2009_09_2013_06
+#  id         :integer          not null, primary key # (7)Obch_PENI_2013_07_2014_06
 #  account    :integer                                # № л.сч
 #  period     :date                                   # Период
 #  service    :string(255)                            # Услуга
