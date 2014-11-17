@@ -1,0 +1,33 @@
+ru:
+  activerecord:
+    models:
+      admin_user: Администраторы
+      obch_dolg200909201306: Obch Dolg 2009-09 - 2013-06
+      obch_dolg201307201406: Obch Dolg 2013-07 - 2014-06
+      ykm_dolg200909201306: YKM Dolg 2009-09 - 2013-06
+      ykm_dolg201307201406: YKM Dolg 2013-07 - 2014-06
+      obch_peni200909201306: Obch Peni 2009-09 - 2013-06
+      obch_peni201307201406: Obch Peni 2013-07 - 2014-06
+      ykm_peni200909201306: YKM Peni 2009-09 - 2013-06
+      ykm_peni201307201406: YKM Peni 2013-07 - 2014-06
+  attributes:
+    account: № л.сч
+    street: Улица
+    house: № Дома
+    appartment: № Квартиры
+    lastname: Фамилия
+    firstname: Имя
+    middlename: Отчество
+    period: Период
+    service: Услуга
+    opening_balance: Входящее сальдо
+    earn: Начислено
+    benefit: Льгота
+    recalculation: Разовый перерасчет
+    compensation: Компенсация
+    payable: К оплате
+    payment: Оплата
+    outgoing_balance: Исходящее сальдо
+    percent: Процент
+    paid: Оплачено
+    debt: Задолженность

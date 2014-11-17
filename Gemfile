@@ -28,6 +28,7 @@ group :development do
 
   # Debuging and profiling
   gem 'awesome_print'
+  gem 'i18n-debug'
 
   # Code styling
   gem 'rubocop', require: false
