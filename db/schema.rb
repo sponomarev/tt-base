@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141116212929) do
+ActiveRecord::Schema.define(version: 20141116235603) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -128,6 +128,26 @@ ActiveRecord::Schema.define(version: 20141116212929) do
   add_index "obch_dolg_201307201406", ["recalculation"], name: "index_obch_dolg_201307201406_on_recalculation", using: :btree
   add_index "obch_dolg_201307201406", ["service"], name: "index_obch_dolg_201307201406_on_service", using: :btree
   add_index "obch_dolg_201307201406", ["street"], name: "index_obch_dolg_201307201406_on_street", using: :btree
+
+  create_table "obch_peni200909201306", force: true, comment: "(7)Obch_PENI_2009_09_2013_06" do |t|
+    t.integer  "account",                            comment: "№ л.сч"
+    t.date     "period",                             comment: "Период"
+    t.string   "service",                            comment: "Услуга"
+    t.decimal  "percent",    precision: 8, scale: 4, comment: "Процент"
+    t.decimal  "earn",       precision: 8, scale: 2, comment: "Начислено пени"
+    t.decimal  "paid",       precision: 8, scale: 2, comment: "Оплачено пени"
+    t.decimal  "debt",       precision: 8, scale: 2, comment: "Задолженность по пени"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "obch_peni200909201306", ["account"], name: "index_obch_peni200909201306_on_account", using: :btree
+  add_index "obch_peni200909201306", ["debt"], name: "index_obch_peni200909201306_on_debt", using: :btree
+  add_index "obch_peni200909201306", ["earn"], name: "index_obch_peni200909201306_on_earn", using: :btree
+  add_index "obch_peni200909201306", ["paid"], name: "index_obch_peni200909201306_on_paid", using: :btree
+  add_index "obch_peni200909201306", ["percent"], name: "index_obch_peni200909201306_on_percent", using: :btree
+  add_index "obch_peni200909201306", ["period"], name: "index_obch_peni200909201306_on_period", using: :btree
+  add_index "obch_peni200909201306", ["service"], name: "index_obch_peni200909201306_on_service", using: :btree
 
   create_table "ykm_dolg_200909201306", force: true, comment: "(17)YKM_DOLG_2009_09_2013_06" do |t|
     t.integer  "account",                                  comment: "№ л.сч"
