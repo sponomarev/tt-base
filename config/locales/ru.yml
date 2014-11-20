@@ -1,4 +1,6 @@
 ru:
+  active_admin:
+    powered_by: ""
   activerecord:
     models:
       admin_user: Администраторы

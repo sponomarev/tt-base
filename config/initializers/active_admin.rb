@@ -5,7 +5,7 @@ ActiveAdmin.setup do |config|
   config.authentication_method = :authenticate_admin_user!
   config.current_user_method = :current_admin_user
   config.logout_link_path = :destroy_admin_user_session_path
-  config.root_to = 'dashboard#index'
+  config.root_to = 'obch_dolg200909201306s#index'
   config.allow_comments = false
   config.batch_actions = true
   config.download_links = [:csv]
