@@ -22,6 +22,9 @@ gem 'devise-russian'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 
+# Settings
+gem 'figaro'
+
 group :development do
   # Annotate models
   gem 'annotate'
@@ -38,4 +41,11 @@ group :development do
   gem 'guard-annotate', '~> 1.1.0', require: false
   gem 'guard-rubocop', require: false
   gem 'guard-bundler', require: false
+
+  # Deploy
+  gem 'snp-best-practices', git: 'git@git.snpdev.ru:saltpepper/snp-best-practices.git'
+end
+
+group :production do
+  gem 'unicorn'
 end
