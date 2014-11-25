@@ -1,6 +1,6 @@
 ActiveAdmin.register ObchPeni201307201406 do
   menu parent: 'Пени'
-
+  config.xlsx_builder.i18n_scope = [:attributes]
   actions :all, except: [:new, :edit, :destroy]
 
   filter :account

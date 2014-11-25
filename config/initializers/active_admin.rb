@@ -8,15 +8,12 @@ ActiveAdmin.setup do |config|
   config.root_to = 'obch_dolg200909201306s#index'
   config.allow_comments = false
   config.batch_actions = true
-  config.download_links = [:csv]
+  config.download_links = [:csv, :xlsx]
 
   # == CSV options
   #
   # Set the CSV builder separator
-  config.csv_options = { col_sep: ';', encoding: 'Windows-1251' }
-  #
-  # Force the use of quotes
-  # config.csv_options = { force_quotes: false }
+  config.csv_options = { col_sep: ';', encoding: 'Windows-1251', force_quotes: true }
 
   # == Pagination
   #

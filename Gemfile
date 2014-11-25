@@ -20,6 +20,7 @@ gem 'devise-russian'
 
 # Admin area
 gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin-axlsx', github: 'sponomarev/activeadmin-axlsx'
 gem 'devise'
 
 # Settings

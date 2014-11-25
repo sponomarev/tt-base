@@ -1,6 +1,6 @@
 ActiveAdmin.register ObchDolg200909201306 do
   menu parent: 'Задолженности'
-
+  config.xlsx_builder.i18n_scope = [:attributes]
   actions :all, except: [:new, :edit, :destroy]
 
   filter :account
