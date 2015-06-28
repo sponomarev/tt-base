@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150628212240) do
+ActiveRecord::Schema.define(version: 20150628213809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -188,6 +188,46 @@ ActiveRecord::Schema.define(version: 20150628212240) do
   add_index "yk_zav_peni", ["percent"], name: "index_yk_zav_peni_on_percent", using: :btree
   add_index "yk_zav_peni", ["period"], name: "index_yk_zav_peni_on_period", using: :btree
   add_index "yk_zav_peni", ["service"], name: "index_yk_zav_peni_on_service", using: :btree
+
+  create_table "yk_zav_saldo", force: true, comment: "YK Zav Saldo" do |t|
+    t.integer  "account",                                  comment: "№ л.сч"
+    t.string   "street",                                   comment: "Улица"
+    t.string   "house",                                    comment: "№ Дома"
+    t.string   "appartment",                               comment: "№ Квартиры"
+    t.string   "lastname",                                 comment: "Фамилия"
+    t.string   "firstname",                                comment: "Имя"
+    t.string   "middlename",                               comment: "Отчество"
+    t.date     "period",                                   comment: "Период"
+    t.string   "service",                                  comment: "Услуга"
+    t.decimal  "opening_balance",  precision: 8, scale: 2, comment: "Входящее сальдо"
+    t.decimal  "earn",             precision: 8, scale: 2, comment: "Начислено"
+    t.decimal  "benefit",          precision: 8, scale: 2, comment: "Льгота"
+    t.decimal  "recalculation",    precision: 8, scale: 2, comment: "Разовый перерасчет"
+    t.decimal  "compensation",     precision: 8, scale: 2, comment: "Компенсация"
+    t.decimal  "payable",          precision: 8, scale: 2, comment: "К оплате"
+    t.decimal  "payment",          precision: 8, scale: 2, comment: "Оплата"
+    t.decimal  "outgoing_balance", precision: 8, scale: 2, comment: "Исходящее сальдо"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "yk_zav_saldo", ["account"], name: "index_yk_zav_saldo_on_account", using: :btree
+  add_index "yk_zav_saldo", ["appartment"], name: "index_yk_zav_saldo_on_appartment", using: :btree
+  add_index "yk_zav_saldo", ["benefit"], name: "index_yk_zav_saldo_on_benefit", using: :btree
+  add_index "yk_zav_saldo", ["compensation"], name: "index_yk_zav_saldo_on_compensation", using: :btree
+  add_index "yk_zav_saldo", ["earn"], name: "index_yk_zav_saldo_on_earn", using: :btree
+  add_index "yk_zav_saldo", ["firstname"], name: "index_yk_zav_saldo_on_firstname", using: :btree
+  add_index "yk_zav_saldo", ["house"], name: "index_yk_zav_saldo_on_house", using: :btree
+  add_index "yk_zav_saldo", ["lastname"], name: "index_yk_zav_saldo_on_lastname", using: :btree
+  add_index "yk_zav_saldo", ["middlename"], name: "index_yk_zav_saldo_on_middlename", using: :btree
+  add_index "yk_zav_saldo", ["opening_balance"], name: "index_yk_zav_saldo_on_opening_balance", using: :btree
+  add_index "yk_zav_saldo", ["outgoing_balance"], name: "index_yk_zav_saldo_on_outgoing_balance", using: :btree
+  add_index "yk_zav_saldo", ["payable"], name: "index_yk_zav_saldo_on_payable", using: :btree
+  add_index "yk_zav_saldo", ["payment"], name: "index_yk_zav_saldo_on_payment", using: :btree
+  add_index "yk_zav_saldo", ["period"], name: "index_yk_zav_saldo_on_period", using: :btree
+  add_index "yk_zav_saldo", ["recalculation"], name: "index_yk_zav_saldo_on_recalculation", using: :btree
+  add_index "yk_zav_saldo", ["service"], name: "index_yk_zav_saldo_on_service", using: :btree
+  add_index "yk_zav_saldo", ["street"], name: "index_yk_zav_saldo_on_street", using: :btree
 
   create_table "ykm_dolg_200909201306", force: true, comment: "(17)YKM_DOLG_2009_09_2013_06" do |t|
     t.integer  "account",                                  comment: "№ л.сч"
