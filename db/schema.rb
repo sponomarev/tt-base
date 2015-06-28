@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141117003227) do
+ActiveRecord::Schema.define(version: 20150628212240) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -168,6 +168,26 @@ ActiveRecord::Schema.define(version: 20141117003227) do
   add_index "obch_peni201307201406", ["percent"], name: "index_obch_peni201307201406_on_percent", using: :btree
   add_index "obch_peni201307201406", ["period"], name: "index_obch_peni201307201406_on_period", using: :btree
   add_index "obch_peni201307201406", ["service"], name: "index_obch_peni201307201406_on_service", using: :btree
+
+  create_table "yk_zav_peni", force: true, comment: "YK_ZAV_PENI" do |t|
+    t.integer  "account",                             comment: "№ л.сч"
+    t.date     "period",                              comment: "Период"
+    t.string   "service",                             comment: "Услуга"
+    t.decimal  "percent",    precision: 16, scale: 4, comment: "Процент"
+    t.decimal  "earn",       precision: 16, scale: 2, comment: "Начислено пени"
+    t.decimal  "paid",       precision: 16, scale: 2, comment: "Оплачено пени"
+    t.decimal  "debt",       precision: 16, scale: 2, comment: "Задолженность по пени"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "yk_zav_peni", ["account"], name: "index_yk_zav_peni_on_account", using: :btree
+  add_index "yk_zav_peni", ["debt"], name: "index_yk_zav_peni_on_debt", using: :btree
+  add_index "yk_zav_peni", ["earn"], name: "index_yk_zav_peni_on_earn", using: :btree
+  add_index "yk_zav_peni", ["paid"], name: "index_yk_zav_peni_on_paid", using: :btree
+  add_index "yk_zav_peni", ["percent"], name: "index_yk_zav_peni_on_percent", using: :btree
+  add_index "yk_zav_peni", ["period"], name: "index_yk_zav_peni_on_period", using: :btree
+  add_index "yk_zav_peni", ["service"], name: "index_yk_zav_peni_on_service", using: :btree
 
   create_table "ykm_dolg_200909201306", force: true, comment: "(17)YKM_DOLG_2009_09_2013_06" do |t|
     t.integer  "account",                                  comment: "№ л.сч"
