@@ -8,15 +8,16 @@ module FineImporter
 
     CSV.foreach(filename, headers: true, col_sep: ';') do |row|
       begin
-        model.create account: row[0].strip,
-                     period: row[1].strip,
-                     service: row[2].strip,
-                     percent: row[3].strip,
-                     earn: row[4].strip,
-                     paid: row[5].strip,
-                     debt: row[6].strip
-      rescue
-        log.warn row.to_s
+        model.create account: row[0].try(:strip),
+                     period:  row[1].try(:strip),
+                     service: row[2].try(:strip),
+                     percent: row[3].try(:strip),
+                     earn:    row[4].try(:strip),
+                     paid:    row[5].try(:strip),
+                     debt:    row[6].try(:strip)
+      rescue => e
+        log.error e.message
+        log.error row.to_s
       end
     end
   end
