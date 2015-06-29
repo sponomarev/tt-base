@@ -9,6 +9,7 @@ require 'capistrano/rbenv'
 require 'capistrano/rails'
 require 'capistrano3/unicorn'
 require 'capistrano/snp'
+require 'capistrano/copy'
 
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
 Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }

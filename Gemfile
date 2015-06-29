@@ -45,6 +45,7 @@ group :development do
 
   # Deploy
   gem 'snp-best-practices', git: 'git@git.snpdev.ru:saltpepper/snp-best-practices.git'
+  gem 'capistrano-scm-copy'
 end
 
 group :production do
