@@ -15,6 +15,7 @@ ru:
       yk_zav_peni: YK Zav Peni
       yk_zav_saldo: YK Zav Saldo
       yk_pro_peni: YK Pro Peni
+      yk_pro_saldo: YK Pro Saldo
   attributes:
     account: № л.сч
     street: Улица
